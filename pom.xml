@@ -78,13 +78,11 @@
                 <artifactId>kumuluzee-cors</artifactId>
                 <version>${kumuluzee-cors.version}</version>
             </dependency>
-
             <dependency>
                 <artifactId>kumuluzee-logs-log4j2</artifactId>
                 <groupId>com.kumuluz.ee.logs</groupId>
                 <version>${kumuluzee-logs.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
