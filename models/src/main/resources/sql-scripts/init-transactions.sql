@@ -1,0 +1,3 @@
+INSERT INTO "notification" (id, title, description, submitted, account_id, transaction_id) VALUES (1, 'Bankomat Dvig', 'Dvig 20e na NLB Ljubljana Siska.', TIMESTAMP '2017-03-01 11:23:38', 1, 1);
+INSERT INTO "notification" (id, title, description, submitted, account_id, transaction_id) VALUES (2, 'Bankomat Dvig', 'Dvig 10e Gorenjska Banka Cerklje.', TIMESTAMP '2017-04-12 01:12:38', 1, 2);
+INSERT INTO "notification" (id, title, description, submitted, account_id, transaction_id) VALUES (3, 'Položnica', 'Plačilo položnice v znesku 24.4e za Komunala Kranj', TIMESTAMP '2017-06-17 12:00:08', 3, 3);

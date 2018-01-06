@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: postgres-notifications-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: postgres-notifications
+    spec:
+      containers:
+        - image: postgres:9.6.3
+          name: postgres-notifications
+          env:
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              value: postgres
+            - name: POSTGRES_DB
+              value: notifications
+          ports:
+          - containerPort: 5432
+            protocol: TCP
