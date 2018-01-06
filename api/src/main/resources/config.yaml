@@ -9,7 +9,7 @@ kumuluzee:
       port: 8081
   datasources:
     - jndi-name: jdbc/NotificationsDS
-      connection-url: jdbc:postgresql://192.168.99.100:5433/notifications
+      connection-url: jdbc:postgresql://192.168.99.100:5434/notifications
       username: postgres
       password: postgres
       max-pool-size: 20

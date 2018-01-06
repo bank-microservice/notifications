@@ -6,6 +6,6 @@ WORKDIR /app
 
 ADD ./api/target /app
 
-EXPOSE 8082
+EXPOSE 8083
 
 CMD ["java", "-server", "-cp", "classes:dependency/*", "com.kumuluz.ee.EeApplication"]
