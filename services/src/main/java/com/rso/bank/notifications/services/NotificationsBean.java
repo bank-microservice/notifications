@@ -29,33 +29,33 @@ public class NotificationsBean {
 
     }
 
-    public Notification getNotification(String transactionId) {
+    public Notification getNotification(String notificationId) {
 
-        Notification transaction = em.find(Notification.class, transactionId);
+        Notification notification = em.find(Notification.class, notificationId);
 
-        if (transaction == null) {
+        if (notification == null) {
             throw new NotFoundException();
         }
 
-        return transaction;
+        return notification;
     }
 
-    public Notification createNotification(Notification transaction) {
+    public Notification createNotification(Notification notification) {
 
         try {
             beginTx();
-            em.persist(transaction);
+            em.persist(notification);
             commitTx();
         } catch (Exception e) {
             rollbackTx();
         }
 
-        return transaction;
+        return notification;
     }
 
-    public Notification putNotification(String transactionId, Notification transaction) {
+    public Notification putNotification(String notificationId, Notification notification) {
 
-        Notification c = em.find(Notification.class, transactionId);
+        Notification c = em.find(Notification.class, notificationId);
 
         if (c == null) {
             return null;
@@ -63,24 +63,24 @@ public class NotificationsBean {
 
         try {
             beginTx();
-            transaction.setId(c.getId());
-            transaction = em.merge(transaction);
+            notification.setId(c.getId());
+            notification = em.merge(notification);
             commitTx();
         } catch (Exception e) {
             rollbackTx();
         }
 
-        return transaction;
+        return notification;
     }
 
-    public boolean deleteNotification(String transactionId) {
+    public boolean deleteNotification(String notificationId) {
 
-        Notification transaction = em.find(Notification.class, transactionId);
+        Notification notification = em.find(Notification.class, notificationId);
 
-        if (transaction != null) {
+        if (notification != null) {
             try {
                 beginTx();
-                em.remove(transaction);
+                em.remove(notification);
                 commitTx();
             } catch (Exception e) {
                 rollbackTx();
